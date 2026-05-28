@@ -39,7 +39,8 @@ namespace one_armed_bandit
             InitializeComponent();
 
             UpdateBalanceText();
-            ResultText.Text = "Eredmény: -";
+            ResultText.Text = "Eredmény:";
+            ResultTextResult.Text = "-";
 
             SetRandomStartSymbols();
         }
@@ -63,6 +64,8 @@ namespace one_armed_bandit
             UpdateBalanceText();
 
             ResultText.Text = "Pörgetés...";
+            ResultTextResult.Text = "-";
+
             SpinButton.IsEnabled = false;
 
             // A három kerék különböző ideig pörög, ettől természetesebbnek tűnik.
@@ -117,21 +120,22 @@ namespace one_armed_bandit
 
         private void CheckResult()
         {
+            ResultText.Text = "Eredmény:";
             if (reel1FinalSymbol == reel2FinalSymbol && reel2FinalSymbol == reel3FinalSymbol)
             {
                 balance += 50;
-                ResultText.Text = "WIN! +50 kredit";
+                ResultTextResult.Text = "WIN! (+50)";
             }
             else if (reel1FinalSymbol == reel2FinalSymbol ||
                      reel1FinalSymbol == reel3FinalSymbol ||
                      reel2FinalSymbol == reel3FinalSymbol)
             {
                 balance += 20;
-                ResultText.Text = "WIN! +20 kredit";
+                ResultTextResult.Text = "WIN! (+20)";
             }
             else
             {
-                ResultText.Text = "LOSE!";
+                ResultTextResult.Text = "LOSE!";
             }
 
             UpdateBalanceText();
@@ -139,7 +143,7 @@ namespace one_armed_bandit
 
         private void UpdateBalanceText()
         {
-            BalanceText.Text = "Egyenleg: " + balance + " kredit";
+            BalanceTextCredit.Text = balance + " kredit";
         }
     }
 }

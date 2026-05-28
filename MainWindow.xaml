@@ -5,161 +5,205 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:one_armed_bandit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Background.png"/>
-        </Grid.Background>
+        Title="One-armed Bandit" Width="1000" Height="613.5">
+    <Viewbox Stretch="Uniform">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Background.png" Stretch="UniformToFill" TileMode="None"/>
+            </Grid.Background>
 
-        <StackPanel HorizontalAlignment="Center"
-                    VerticalAlignment="Center" Width="768">
+            <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Width="768">
 
-            <TextBlock Text="JACKPOT"
+                <!--Margin="0, 120, 0, 0"-->
+
+                <!--<TextBlock Text="JACKPOT"
                        FontSize="56"
                        FontWeight="Bold"
                        Foreground="Gold"
                        HorizontalAlignment="Center"
-                       Margin="0,0,0,30"/>
+                       Margin="0,0,0,30"/>-->
 
-            <!-- A három kerék -->
-            <StackPanel Orientation="Horizontal"
+                <!-- A három kerék -->
+                <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
-                        Margin="0,0,0,17.5">
+                        Margin="0,140,5,0">
 
-                <!-- 1. kerék -->
-                <Border Width="140"
-                        Height="180"
+                    <!-- 1. kerék -->
+                    <Border Width="140"
+                        Height="185"
                         Background="White"
                         BorderBrush="Gold"
                         BorderThickness="6"
-                        CornerRadius="18"
-                        Margin="2">
-                    <StackPanel VerticalAlignment="Center">
-                        <TextBlock x:Name="Reel1Top"
+                        CornerRadius="12"
+                        Margin="1">
+
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="Reel1Top"
                                    Text="?"
                                    FontSize="50"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="Black"/>
-                        <TextBlock x:Name="Reel1Middle"
+                            <TextBlock x:Name="Reel1Middle"
                                    Text="?"
                                    FontSize="70"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="DarkRed"/>
-                        <TextBlock x:Name="Reel1Bottom"
+                            <TextBlock x:Name="Reel1Bottom"
                                    Text="?"
                                    FontSize="50"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="Black"/>
-                    </StackPanel>
-                </Border>
+                        </StackPanel>
+                    </Border>
 
-                <!-- 2. kerék -->
-                <Border Width="140"
-                        Height="180"
+                    <!-- 2. kerék -->
+                    <Border Width="140"
+                        Height="185"
                         Background="White"
                         BorderBrush="Gold"
                         BorderThickness="6"
-                        CornerRadius="18"
-                        Margin="2">
-                    <StackPanel VerticalAlignment="Center">
-                        <TextBlock x:Name="Reel2Top"
+                        CornerRadius="12"
+                        Margin="1">
+
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="Reel2Top"
                                    Text="?"
                                    FontSize="50"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="Black"/>
-                        <TextBlock x:Name="Reel2Middle"
+                            <TextBlock x:Name="Reel2Middle"
                                    Text="?"
                                    FontSize="70"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="DarkRed"/>
-                        <TextBlock x:Name="Reel2Bottom"
+                            <TextBlock x:Name="Reel2Bottom"
                                    Text="?"
                                    FontSize="50"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="Black"/>
-                    </StackPanel>
-                </Border>
+                        </StackPanel>
+                    </Border>
 
-                <!-- 3. kerék -->
-                <Border Width="140"
-                        Height="180"
+                    <!-- 3. kerék -->
+                    <Border Width="140"
+                        Height="185"
                         Background="White"
                         BorderBrush="Gold"
                         BorderThickness="6"
-                        CornerRadius="18"
-                        Margin="2">
-                    <StackPanel VerticalAlignment="Center">
-                        <TextBlock x:Name="Reel3Top"
+                        CornerRadius="12"
+                        Margin="1">
+
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="Reel3Top"
                                    Text="?"
                                    FontSize="50"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="Black"/>
-                        <TextBlock x:Name="Reel3Middle"
+                            <TextBlock x:Name="Reel3Middle"
                                    Text="?"
                                    FontSize="70"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="DarkRed"/>
-                        <TextBlock x:Name="Reel3Bottom"
+                            <TextBlock x:Name="Reel3Bottom"
                                    Text="?"
                                    FontSize="50"
                                    FontWeight="Bold"
                                    TextAlignment="Center"
                                    Foreground="Black"/>
-                    </StackPanel>
-                </Border>
+                        </StackPanel>
+                    </Border>
 
-            </StackPanel>
+                </StackPanel>
 
-            <!-- Alsó rész: egyenleg, gomb, eredmény -->
-            <StackPanel Orientation="Horizontal"
+                <!-- Alsó rész: egyenleg, gomb, eredmény -->
+                <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
+                        VerticalAlignment="Top"
+                        Margin="0,10,0,18">
 
-                <TextBlock x:Name="BalanceText"
-                           Text="Egyenleg: 100 kredit"
-                           Width="260"
-                           FontSize="24"
+                    <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0,00,0,35">
+
+                        <TextBlock x:Name="BalanceText"
+                           Text="Egyenleg:"
+                           Width="155"
+                           FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            VerticalAlignment="Center"
-                           TextAlignment="Center"/>
+                           TextAlignment="Center"
+                           Margin="5,0,0,2"/>
 
-                <Border
+                        <TextBlock x:Name="BalanceTextCredit"
+                           Text="100 kredit"
+                           Width="155"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           TextAlignment="Center"
+                            Margin="0,0,0,0"/>
+                    </StackPanel>
+
+                    <Border
                     BorderBrush="#FF067600"
-                        BorderThickness="4"
-                        CornerRadius="10"
-                                            Margin="10,0, 10, 10">
-                   
-                <Button x:Name="SpinButton"
-                        Content="PÖRGETÉS"
-                        Width="180"
-                        Height="50"
+                    Background="LimeGreen"
+                    BorderThickness="4"
+                    CornerRadius="10"
+                    Margin="0, 14.5, 3, 26">
+
+                        <Button x:Name="SpinButton"
+                        Content="SPIN"
+                        Width="160"
+                        Height="45"
                         FontSize="28"
                         FontWeight="Bold"
-                        Background="LimeGreen"
+                        Background="Transparent"
                         Foreground="White"
-                        Click="SpinButton_Click"/>
-                </Border>
-                <TextBlock x:Name="ResultText"
-                           Text="Eredmény: -"
-                           Width="260"
-                           FontSize="24"
+                        Click="SpinButton_Click" BorderBrush="#00000000"/>
+                    </Border>
+
+                    <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0,00,0,35">
+                        
+                        
+                        <TextBlock  x:Name="ResultText"
+                           Text="Eredmény:"
+                           Width="145"
+                           FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            VerticalAlignment="Center"
-                           TextAlignment="Center"/>
+                           TextAlignment="Center"
+                           Margin="0,0,15,2"/>
+
+                        <TextBlock x:Name="ResultTextResult"
+                           Text="-"
+                           Width="140"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           TextAlignment="Center"
+                           Margin="0,0,15,0"/>
+                    </StackPanel>
+                </StackPanel>
 
             </StackPanel>
 
-        </StackPanel>
-
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Window>
