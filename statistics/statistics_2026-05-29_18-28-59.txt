@@ -1,0 +1,13 @@
+﻿ONE-ARMED-BANDIT - STATISTICS
+Start of the game: 2026.05.29. 18:28:59
+
+Total spins: 4
+
+3 of a kind (+50 credits): 1 piece(s) - 25,00 %
+2 of a kind (+20 credits): 2 piece(s) - 50,00 %
+Lose 	:    1 piece(s) - 25,00 %
+
+Total WINS: 3 piece(s) - 75,00 %
+Total Rewald: 90 credits
+Current balance: 150 credits
+Net profit: 50 credits
